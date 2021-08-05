@@ -1,15 +1,16 @@
 from dataclasses import dataclass, asdict
+from model.columns_pdf import ColumnsPdf
 
 @dataclass
 class Pdf:
-    n_instalacao: str = None
-    n_cliente: str = None
-    n_medidor: str = None
-    cnpj: str = None
-    endereco: str = None
-    cep: str = None
+    n_instalacao: str = ''
+    n_cliente: str = ''
+    n_medidor: str = ''
+    cnpj: str = ''
+    endereco: str = ''
+    cep: str = ''
 
-    tabela: list = None
+    tabela: list = ''
 
     def to_string(self) -> dict:
         return asdict(self)
