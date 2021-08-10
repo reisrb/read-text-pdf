@@ -9,12 +9,22 @@ from model.columns_pdf import ColumnsPdf
 
 @dataclass
 class Pdf:
+    filename: str = ""
+    data_emissao: str = ""
+    referente: str = ""
+    vencimento: str = ""
     n_instalacao: str = ""
     n_cliente: str = ""
     n_medidor: str = ""
     cnpj: str = ""
     endereco: str = ""
     cep: str = ""
+    subgrupo: str = ""
+    modalidade: str = ""
+    demanda_unica: str = ""
+    demanda_hora_ponta: str = ""
+    demanda_hora_fora_ponta: str = ""
+    aliquota: str = ""
 
     tabela: List[ColumnsPdf] = ""
 
