@@ -32,9 +32,9 @@ def read_pdf(path: str):
     return texts, table
 
 # DEBUG
-texts1, table1 = read_pdf("pdfs/Barbosa ENEL_SP loja 19 abr21.pdf") # Azul normal
-texts2, table2 = read_pdf("pdfs/Barbosa ENEL_SP loja 38 abr21.pdf") # Verde sem valores
-texts3, table3 = read_pdf("pdfs/Barbosa ENEL_SP loja 37 mai21.pdf") # Verde normal
+texts1, table1 = read_pdf("in/Barbosa ENEL_SP loja 19 abr21.pdf") # Azul normal
+texts2, table2 = read_pdf("in/Barbosa ENEL_SP loja 38 abr21.pdf") # Verde sem valores
+texts3, table3 = read_pdf("in/Barbosa ENEL_SP loja 37 mai21.pdf") # Verde normal
 # pd.DataFrame(
 #     data=table
 # )
@@ -137,15 +137,15 @@ def full(path: str):
     return pdf
 
 # DEBUG
-# example = full("pdfs/Barbosa ENEL_SP loja 28 mai21.pdf")
-# example = full("pdfs/Barbosa ENEL_SP loja 37 abr21.pdf")
+# example = full("in/Barbosa ENEL_SP loja 28 mai21.pdf")
+# example = full("in/Barbosa ENEL_SP loja 37 abr21.pdf")
 # example.to_dataframe()
 # example.tabela_to_dataframe().to_csv('t.csv')
 
 
 # %%
 extracted = []
-path = "pdfs"
+path = "in"
 for file in tqdm(listdir(path)):
     try:
         extracted.append(full("/".join([path, file])))
